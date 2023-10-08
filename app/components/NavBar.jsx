@@ -26,19 +26,24 @@ export const NavBar = () => {
     <nav className="flex justify-between items-end mt-7 md:mx-auto relative w-full ">
       {" "}
       <Link href="/">
-        <img src="assets/LA_PLACE-logo.svg" alt="laplace logo" />
+        <img
+          src="assets/logo.svg"
+          width={120}
+          height={120}
+          alt="ROUTEXT logo"
+        />
       </Link>
       <ul
         className={`${
           navactive
-            ? "fixed top-[100px]  right-0 z-40 w-screen  flex-col flex items-start text-CreamyWhite-0 justify-center text-4xl space-y-5 glass h-fit rounded-b-2xl  px-7 py-10 transition-all duration-300 delay-300 visibles"
+            ? "fixed top-[100px]  right-0 z-40 w-screen  flex-col flex items-start text-black justify-center text-4xl space-y-5 glass h-fit rounded-b-2xl  px-7 py-10 transition-all duration-300 delay-300 visibles"
             : "invisible sm:visible top-[100px]  sm:opacity-100  sm:right-0 sm:top-0 absolute sm:relative"
         }   sm:flex sm:items-center sm:space-x-5 `}
       >
         {link.map((links) => (
           <li key={links.id} className="sm:block ">
             <Link
-              className={`  ${links.className} sm:text-CreamyWhite-0  `}
+              className={`  ${links.className} sm:text-black  `}
               href={links.href}
               key={links.id}
             >
@@ -52,7 +57,7 @@ export const NavBar = () => {
         onClick={() => setNavActive(!navactive)}
       >
         <div className="w-10 h-1  bg-RedOrange-0"></div>
-        <div className="w-10 h-1 bg-CreamyWhite-0"></div>
+        <div className="w-10 h-1 bg-black"></div>
       </div>
     </nav>
   );
